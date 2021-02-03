@@ -1,0 +1,8 @@
+.header .item {
+    float: left;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: small;
+    margin-right: 10px;
+    color: black;
+}

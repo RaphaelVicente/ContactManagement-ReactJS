@@ -1,0 +1,15 @@
+.header {
+    background: linear-gradient(white, lightgray);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 30px;
+}
+
+.header h3 {
+    font-family: "Brush Script MT", Georgia, Garamond;
+    color: black;
+    text-shadow: 2px 2px 8px rgb(77, 76, 76);
+    line-height: 30px;
+    margin-left: 10px;
+    width: 200px;
+    float: left;
+}

@@ -1,0 +1,9 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+.root {
+	background: linear-gradient(to top right, darkblue, blue, lightblue);
+	min-height: calc(100vh);
+}
