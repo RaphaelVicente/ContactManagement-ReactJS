@@ -1,10 +1,10 @@
-import React from "react"
+import React from "react";
 
-import Menu from "./menu"
-import MenuItem from "./menuItem"
-import MenuTree from "./menuTree"
+import Menu from "./menu";
+import MenuItem from "./menuItem";
+import MenuTree from "./menuTree";
 
-import "../assets/css/components/headerStyle.css"
+import "../assets/css/components/headerStyle.css";
 
 export default props => (
     <div className="header">
@@ -13,9 +13,9 @@ export default props => (
             <MenuItem label="Main" path="/main"/>
             <MenuItem label="Contacts" path="/contacts"/>
             <MenuTree label="Administrator" path="">
-                <MenuItem label="Profile" path=""/>
-                <MenuItem label="Register" path=""/>
+                <MenuItem label="Profile" path="/main"/>
+                <MenuItem label="Register" path="/main"/>
             </MenuTree>
         </Menu>
     </div>
-)
+);

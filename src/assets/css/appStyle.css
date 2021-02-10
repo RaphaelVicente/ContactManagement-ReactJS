@@ -4,6 +4,11 @@
 }
 
 .root {
-	background: linear-gradient(to top right, darkblue, blue, lightblue);
+	background: linear-gradient(to top left, darkblue, rgb(0, 49, 83));
 	min-height: calc(100vh);
+}
+
+.body {
+	height: calc(90vh);
+	margin-top: 3%;
 }
