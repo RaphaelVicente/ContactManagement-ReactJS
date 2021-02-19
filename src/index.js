@@ -1,9 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { applyMiddleware, createStore } from "redux";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+import promise from "redux-promise";
 
-import LoginOrApp from "./loginOrApp";
+import SignInOrApp from "./signinOrApp";
+import reducers from "./store/reducers";
 
+const store = applyMiddleware(thunk, promise)(createStore)(reducers);
 ReactDOM.render(
-    <LoginOrApp/>,
+    <Provider store={store}>
+        <SignInOrApp/>
+    </Provider>,
     document.getElementById("main")
 );

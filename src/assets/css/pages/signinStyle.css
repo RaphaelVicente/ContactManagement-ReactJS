@@ -1,0 +1,46 @@
+.background {
+    background: linear-gradient(to top left, #0099ff, #0066cc);
+    display: grid;
+    min-height: calc(100vh);
+}
+
+.signin {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 5px black;
+    height: 430px;
+    margin: 5% 40% 0% 40%;
+}
+
+.signin-box {
+    margin: 15% 0%;
+    text-align: center;
+}
+
+.signin-box label {
+    display: block;
+    font-size: xx-large;
+    margin-bottom: 30px;
+}
+
+.signin-box input {
+    height: 40px;
+    width: 70%;
+    margin: 10px 0px;
+}
+
+.signin-box button {
+    display: block;
+    font-size: larger;
+    height: 45px;
+    margin: 5% 13%;
+    text-align: center;
+    width: 74%;
+}
+
+.signin-box a {
+    color: black;
+    font-size: small;
+    text-decoration: none;
+    margin: 5% 0%;
+}

@@ -1,12 +1,12 @@
 import React from "react";
 
-import "../assets/css/pages/mainStyle.css";
+import Panel from "../components/panel";
 
 function Main(props) {
     return (
-        <div className="main">
+        <Panel>
             <h3>Main</h3>
-        </div>
+        </Panel>
     );
 }
 

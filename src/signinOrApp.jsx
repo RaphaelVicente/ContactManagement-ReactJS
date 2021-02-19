@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 
 import App from "./app";
-import Login from "./pages/login";
+import SignIn from "./pages/signin";
 
-class LoginOrApp extends Component {
-
-    componentWillMount() {
-        //Validate token
-    }
+class SignInOrApp extends Component {
 
     render() {
         const { token, validToken } = this.props.login || { token: null, validToken: false };
@@ -16,7 +12,7 @@ class LoginOrApp extends Component {
             return <App />;
         }
         else if (!validToken) {
-            return <Login />;
+            return <SignIn />;
         }
         else {
             return false;
@@ -24,4 +20,4 @@ class LoginOrApp extends Component {
     }
 }
 
-export default LoginOrApp;
+export default SignInOrApp;
