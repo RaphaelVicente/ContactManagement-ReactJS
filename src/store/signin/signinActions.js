@@ -1,27 +1,26 @@
 import axios from "axios";
 import { toastr } from "react-redux-toastr";
+
 import { AUTHENTICATE, VALIDATE_TOKEN } from "../../common/apiURLs";
-// import errorHandler from '../common/msg/errorHandler'
+import errorHandler from "../../common/errorHandler";
 
 export const actions = {
-    TOKEN_VALIDATED: 'TOKEN_VALIDATED',
-    USER_AUTHENTICATED: 'USER_AUTHENTICATED'
+    TOKEN_VALIDATED: "TOKEN_VALIDATED",
+    USER_AUTHENTICATED: "USER_AUTHENTICATED"
 };
 
 export function signin(values) {
-    console.log(values);
     return dispatch => {
         axios.post(AUTHENTICATE, getUser(values))
             .then(resp => {
                 if (resp.status === 200) {
                     dispatch({ type: actions.USER_AUTHENTICATED, payload: resp.data });
+                    axios.defaults.headers.common["Authorization"] = JSON.stringify(resp.data.token);
                 } else
-                    toastr.error('Erro', resp.data.error);
+                    toastr.error("Erro", resp.data.error);
             })
             .catch(e => {
-                // errorHandler(e).forEach(error => toastr.error('Erro', error));
-                console.log(e);
-                toastr.error('Erro', e);
+                errorHandler(e).forEach(error => toastr.error("Erro", error));
             });
     };
 }
@@ -55,7 +54,7 @@ export function verifyToken(dispatch, token) {
 
 function getUser(values) {
     return {
-        username: values.login,
+        username: values.username,
         password: values.password
     };
 }

@@ -1,12 +1,20 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 import App from "./app";
 import SignIn from "./pages/signin";
+import { validateToken } from "./store/signin/signinActions";
 
 class SignInOrApp extends Component {
 
+    componentDidMount() {
+        if (this.props.signin)
+            this.props.validateToken(this.props.signin.token)
+    }
+
     render() {
-        const { token, validToken } = this.props.login || { token: null, validToken: false };
+        const validToken = this.props.signin || false;
 
         if (validToken) {
             return <App />;
@@ -20,4 +28,7 @@ class SignInOrApp extends Component {
     }
 }
 
-export default SignInOrApp;
+const mapStateToProps = state => ({signin: state.signin});
+const mapDispatchToProps = dispatch => bindActionCreators({validateToken}, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignInOrApp);

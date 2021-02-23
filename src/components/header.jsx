@@ -12,9 +12,9 @@ export default props => (
         <Menu>
             <MenuItem label="Main" path="/main"/>
             <MenuItem label="Contacts" path="/contacts"/>
-            <MenuTree label="Administrator" path="">
+            <MenuItem label="Country" path="/country"/>
+            <MenuTree label="Administrator">
                 <MenuItem label="Profile" path="/main"/>
-                <MenuItem label="Register" path="/main"/>
             </MenuTree>
         </Menu>
     </div>

@@ -19,7 +19,10 @@ module.exports = {
     },
 
     resolve: {
-        extensions: [".js", ".jsx"]
+        extensions: [".js", ".jsx"],
+        alias: {
+            modules: __dirname + '/node_modules'
+        }
     },
 
     plugins: [
@@ -41,7 +44,6 @@ module.exports = {
 
         {
             test: /\.css$/,
-            exclude: /node_modules/,
             use: [MiniCssExtractPlugin.loader, "css-loader"]
         },
 
