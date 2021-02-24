@@ -9,11 +9,13 @@ export const actions = {
 };
 
 export function getAllCountries() {
-    axios.get(LIST_COUNTRIES)
-        .then(resp => {
-            dispatch({ type: actions.LIST_COUNTRIES, payload: resp.data });
-        })
-        .catch(e => {
-            errorHandler(e).forEach(error => toastr.error("Erro", error));
-        });
+    return dispatch => {
+        axios.get(LIST_COUNTRIES)
+            .then(resp => {
+                dispatch({ type: actions.LIST_COUNTRIES, payload: resp.data });
+            })
+            .catch(e => {
+                errorHandler(e).forEach(error => toastr.error("Erro", error));
+            });
+    };
 }

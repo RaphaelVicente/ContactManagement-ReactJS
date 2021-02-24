@@ -15,7 +15,6 @@ export function signin(values) {
             .then(resp => {
                 if (resp.status === 200) {
                     dispatch({ type: actions.USER_AUTHENTICATED, payload: resp.data });
-                    axios.defaults.headers.common["Authorization"] = JSON.stringify(resp.data.token);
                 } else
                     toastr.error("Erro", resp.data.error);
             })

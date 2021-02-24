@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import axios from "axios";
 
 import App from "./app";
 import SignIn from "./pages/signin";
@@ -14,9 +15,10 @@ class SignInOrApp extends Component {
     }
 
     render() {
-        const validToken = this.props.signin || false;
+        const { validToken, token } = this.props.signin || false;
 
         if (validToken) {
+            axios.defaults.headers.common["Authorization"] = JSON.stringify(token);
             return <App />;
         }
         else if (!validToken) {
@@ -28,7 +30,7 @@ class SignInOrApp extends Component {
     }
 }
 
-const mapStateToProps = state => ({signin: state.signin});
+const mapStateToProps = state => ({ signin: state.signin });
 const mapDispatchToProps = dispatch => bindActionCreators({validateToken}, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignInOrApp);

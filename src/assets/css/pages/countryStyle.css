@@ -1,0 +1,33 @@
+.country-label {
+    display: inline-block;
+    margin-left: 10px;
+    padding-top: 5px;
+}
+
+.country-button {
+    border-radius: 10px;
+    float: right;
+    height: 40px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+table {
+    margin: 10px 20px 0px;
+    padding-bottom: 15px;
+    width: 97%;
+}
+
+th {
+    text-align: left;
+    border-bottom: 2px solid #bbb;
+}
+
+td {
+    vertical-align: center;
+    border-bottom: 1px solid #bbb;
+}
+
+tr :hover {
+    background-color: #f5f5f5;
+}

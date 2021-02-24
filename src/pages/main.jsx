@@ -23,21 +23,21 @@ class Main extends Component {
                     </div>
                     <div className="card">
                         <label>States</label>
-                        <h1>50</h1>
+                        <h1>As soon</h1>
                     </div>
                     <div className="card">
                         <label>Cities</label>
-                        <h1>100</h1>
+                        <h1>As soon</h1>
                     </div>
                 </div>
                 <div className="two-cols">
                     <div className="card">
                         <label>People</label>
-                        <h1>120</h1>
+                        <h1>As soon</h1>
                     </div>
                     <div className="card">
                         <label>Addresses</label>
-                        <h1>125</h1>
+                        <h1>As soon</h1>
                     </div>
                 </div>
             </Panel>
