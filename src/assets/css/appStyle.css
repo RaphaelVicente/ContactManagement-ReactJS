@@ -4,7 +4,8 @@
 }
 
 .root {
-	background: linear-gradient(to top left, darkblue, rgb(0, 49, 83));
+	/* background: linear-gradient(to top left, darkblue, rgb(0, 49, 83)); */
+	background: linear-gradient(to top left, #0099ff, #0066cc);
 	min-height: calc(100vh);
 }
 

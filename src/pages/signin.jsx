@@ -12,7 +12,7 @@ class SignIn extends Component {
 
     forgotPassword(event) {
         event.preventDefault();
-        toastr.error("Info", "It is not finished yet...");
+        toastr.warning("Info", "It is not finished yet...");
     }
 
     render() {
